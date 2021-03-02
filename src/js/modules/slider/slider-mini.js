@@ -80,17 +80,16 @@ export default class MiniSlider extends Slider {
 
     if (this.autoplay) {
       this.autoPlayStop();
+      
+      this.container.addEventListener('mouseleave', () => {
+        this.autoPlayStop();
+      });
+      this.next.addEventListener('mouseleave', () => {
+        this.autoPlayStop();
+      });
+      this.prev.addEventListener('mouseleave', () => {
+        this.autoPlayStop();
+      });
     }
-    this.autoPlayStop();
-
-    this.container.addEventListener('mouseleave', () => {
-      this.autoPlayStop();
-    });
-    this.next.addEventListener('mouseleave', () => {
-      this.autoPlayStop();
-    });
-    this.prev.addEventListener('mouseleave', () => {
-      this.autoPlayStop();
-    });
   }
 }
