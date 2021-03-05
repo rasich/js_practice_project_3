@@ -52,7 +52,6 @@ export default class MainSlider extends Slider {
       });
     });
 
-    // document.querySelectorAll('.prevmodule').forEach(item => {
     this.prev.forEach(item => {
       item.addEventListener('click', (e) => {
         e.stopPropagation();
